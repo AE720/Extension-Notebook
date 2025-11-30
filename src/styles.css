@@ -163,3 +163,102 @@
 #notebookPanel .ql-editor ul {
     padding-left: 0.5em;
 }
+
+/* Text Block Styles */
+.text-block {
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--SmartThemeBlurTintColor);
+}
+
+.text-block-view, .text-block-edit {
+    padding: 10px;
+}
+
+.text-block-content {
+    white-space: pre-wrap;
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+.text-block-textarea {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
+    padding: 8px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.text-block-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.text-block-actions button {
+    background-color: var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeBodyColor);
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.text-block-actions button:hover {
+    filter: brightness(1.2);
+}
+
+.text-blocks-container {
+    margin-top: 10px;
+}
+
+.add-text-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--SmartThemeBlurTintColor);
+    border: 1px dashed var(--SmartThemeBorderColor);
+    border-radius: 5px;
+    color: var(--SmartThemeBodyColor);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-text-block:hover {
+    background-color: var(--black30a);
+}
+
+.page-content-toggle {
+    display: flex;
+    margin: 10px 0;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 8px;
+    background-color: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    cursor: pointer;
+}
+
+.toggle-button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.toggle-button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.toggle-button.active {
+    background-color: var(--SmartThemeQuoteColor);
+}
