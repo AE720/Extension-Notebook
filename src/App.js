@@ -11,6 +11,7 @@ import { importFromUrl } from './util.js';
  * @typedef {object} Page
  * @property {string} title - The title of the page
  * @property {string} content - The content of the page
+ * @property {Array} textBlocks - Array of text blocks
  */
 
 const dragElement = await importFromUrl('/scripts/RossAscends-mods.js', 'dragElement', () => { });
@@ -56,6 +57,10 @@ function App({ onCloseClicked }) {
                 setSelectedIndex(newPages.length - 1);
             }
         } else {
+            // Ensure textBlocks is always an array
+            if (!page.textBlocks) {
+                page.textBlocks = [];
+            }
             newPages[index] = page;
         }
 
@@ -64,7 +69,7 @@ function App({ onCloseClicked }) {
     }
 
     function addPage() {
-        const newPage = { title: 'Untitled', content: '' };
+        const newPage = { title: 'Untitled', content: '', textBlocks: [] };
         const newPages = [...pages, newPage];
         setPages(newPages);
         StateManager.setPages(newPages);
